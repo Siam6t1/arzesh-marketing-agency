@@ -1,0 +1,166 @@
+
+/* ============================================================
+   ARZESH — Lightbox
+   ============================================================ */
+
+
+/* ============================================================
+   01. LIGHTBOX OVERLAY
+============================================================ */
+
+/* Lightbox — Default State */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(1, 42, 45, 0.96);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+/* Lightbox — Open State */
+.lightbox.open {
+  display: flex;
+}
+
+
+/* ============================================================
+   02. LIGHTBOX CONTENT LAYOUT
+============================================================ */
+
+/* Main Content Container */
+.lightbox-content {
+  max-width: 92vw;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+/* ============================================================
+   03. LIGHTBOX IMAGE
+============================================================ */
+
+/* Image Wrapper */
+.lightbox-img-wrap {
+  flex: 1;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+/* Lightbox Image */
+.lightbox-img {
+  max-width: 92vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+
+
+/* ============================================================
+   04. LIGHTBOX IMAGE CAPTION
+============================================================ */
+
+/* Image Caption */
+.lightbox-caption {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.85rem;
+  padding: 0 16px;
+}
+
+
+/* ============================================================
+   05. LIGHTBOX NAVIGATION CONTROLS
+============================================================ */
+
+/* Close, Previous & Next Controls */
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 2;
+}
+
+/* Navigation Controls — Hover */
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+
+/* ============================================================
+   06. LIGHTBOX CONTROL POSITIONS
+============================================================ */
+
+/* Close Button */
+.lightbox-close {
+  top: 20px;
+  right: 20px;
+}
+
+/* Previous Image Button */
+.lightbox-prev {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Next Image Button */
+.lightbox-next {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/* ============================================================
+   07. RESPONSIVE LIGHTBOX
+============================================================ */
+
+/* Mobile Devices — 600px */
+@media (max-width: 600px) {
+
+  /* Lightbox Overlay Spacing */
+  .lightbox {
+    padding: 16px;
+  }
+
+  /* Navigation Control Sizes */
+  .lightbox-close,
+  .lightbox-prev,
+  .lightbox-next {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+
+  /* Previous Button Position */
+  .lightbox-prev {
+    left: 8px;
+  }
+
+  /* Next Button Position */
+  .lightbox-next {
+    right: 8px;
+  }
+
+}

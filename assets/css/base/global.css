@@ -1,0 +1,156 @@
+
+/* ============================================================
+   ARZESH — Global Layout Utilities
+   ============================================================ */
+
+
+/* ============================================================
+   01. CONTAINER & SECTION LAYOUT
+============================================================ */
+
+/* Main Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* General Section */
+.section {
+  padding: var(--section-padding) 0;
+}
+
+/* Section Variants */
+.section--dark {
+  background: var(--deep-teal);
+  color: var(--white);
+}
+
+.section--light {
+  background: var(--off-white);
+}
+
+
+/* ============================================================
+   02. GRID LAYOUT UTILITIES
+============================================================ */
+
+/* Two-Column Grid */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Three-Column Grid */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Four-Column Grid */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+
+/* ============================================================
+   03. IMAGE FALLBACK
+============================================================ */
+
+img.img-fallback {
+  background: linear-gradient(
+    135deg,
+    var(--deep-teal) 0%,
+    var(--slate-teal) 100%
+  );
+  min-height: 200px;
+}
+
+
+/* ============================================================
+   04. INNER PAGE HEADER
+============================================================ */
+
+/* Page Header Container */
+.page-header {
+  padding: 96px 0 64px;
+  background: var(--deep-teal);
+  color: var(--white);
+}
+
+/* Page Header Title */
+.page-header h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  max-width: 820px;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+/* Page Header Description */
+.page-header p {
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  color: var(--text-muted-light);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+
+/* ============================================================
+   05. RESPONSIVE LAYOUT
+============================================================ */
+
+/* Large Tablets & Small Laptops — 1024px */
+@media (max-width: 1024px) {
+
+  /* Grid Adjustments */
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* Tablets & Mobile Devices — 768px */
+@media (max-width: 768px) {
+
+  /* Single-Column Grid */
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Page Header */
+  .page-header {
+    padding: 64px 0 48px;
+  }
+
+  /* Section Title */
+  .section-title {
+    font-size: clamp(1.75rem, 6vw, 2.4rem);
+  }
+
+}
+
+
+/* Small Mobile Devices — 480px */
+@media (max-width: 480px) {
+
+  /* Container Spacing */
+  .container {
+    padding: 0 16px;
+  }
+
+}

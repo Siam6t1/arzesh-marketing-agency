@@ -1,0 +1,93 @@
+
+/* ============================================================
+   ARZESH — Typography
+   ============================================================ */
+
+
+/* ============================================================
+   01. GLOBAL HEADING STYLES
+============================================================ */
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--deep-teal);
+}
+
+
+/* ============================================================
+   02. SECTION LABEL
+============================================================ */
+
+/* Default Section Label */
+.section-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--slate-teal);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+/* Dark Section Variant */
+.section--dark .section-label {
+  color: var(--text-muted-light);
+}
+
+
+/* ============================================================
+   03. SECTION TITLE
+============================================================ */
+
+/* Default Section Title */
+.section-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  max-width: 760px;
+  color: var(--deep-teal);
+}
+
+/* Dark Section Variant */
+.section--dark .section-title {
+  color: var(--white);
+}
+
+
+/* ============================================================
+   04. SECTION SUBTITLE
+============================================================ */
+
+/* Default Section Subtitle */
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 560px;
+  margin-top: 16px;
+}
+
+/* Dark Section Variant */
+.section--dark .section-subtitle {
+  color: var(--text-muted-light);
+}
+
+
+/* ============================================================
+   05. TEXT ALIGNMENT UTILITIES
+============================================================ */
+
+/* Center-Aligned Text */
+.text-center {
+  text-align: center;
+}
+
+/* Center-Aligned Section Title */
+.text-center .section-title {
+  margin-left: auto;
+  margin-right: auto;
+}

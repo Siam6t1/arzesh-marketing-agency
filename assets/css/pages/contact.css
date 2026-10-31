@@ -1,0 +1,289 @@
+
+/* ============================================================
+   ARZESH — Contact Page
+   ============================================================ */
+
+
+/* ============================================================
+   01. CONTACT SECTION LAYOUT
+============================================================ */
+
+.contact-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  padding: 96px 0;
+}
+
+
+/* ============================================================
+   02. CONTACT INTRODUCTION
+============================================================ */
+
+/* Introduction Heading */
+.contact-intro h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+/* Introduction Paragraph */
+.contact-intro p {
+  font-size: 1rem;
+  color: var(--slate-teal);
+  line-height: 1.8;
+  margin-bottom: 16px;
+  max-width: 480px;
+}
+
+
+/* ============================================================
+   03. INQUIRY TOPICS
+============================================================ */
+
+/* Inquiry Topics List */
+.inquiry-topics {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  max-width: 480px;
+}
+
+/* Inquiry Topic Item */
+.inquiry-topics li {
+  font-size: 0.92rem;
+  color: var(--slate-teal);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  gap: 12px;
+  line-height: 1.5;
+}
+
+/* Last Item — Remove Bottom Border */
+.inquiry-topics li:last-child {
+  border-bottom: none;
+}
+
+/* Inquiry Topic Arrow */
+.inquiry-topics li::before {
+  content: '→';
+  color: var(--deep-teal);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+
+/* ============================================================
+   04. CONTACT CARDS LAYOUT
+============================================================ */
+
+/* Contact Cards Container */
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Base Contact Card */
+.contact-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Contact Card Hover */
+.contact-card:hover {
+  border-color: var(--border-medium);
+  box-shadow: 0 8px 32px rgba(1, 42, 45, 0.06);
+}
+
+
+/* ============================================================
+   05. CONTACT CARD CONTENT
+============================================================ */
+
+/* Contact Card Label */
+.contact-card .cc-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate-teal);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Contact Card Value */
+.contact-card .cc-value {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--deep-teal);
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+/* Contact Card Description */
+.contact-card .cc-desc {
+  font-size: 0.88rem;
+  color: var(--slate-teal);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+/* ============================================================
+   06. CONTACT CARD ACTIONS
+============================================================ */
+
+/* Contact Actions Container */
+.cc-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+/* ============================================================
+   07. COPY BUTTON
+============================================================ */
+
+/* Base Copy Button */
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--off-white);
+  color: var(--deep-teal);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/* Copy Button Hover */
+.copy-btn:hover {
+  background: var(--deep-teal);
+  color: var(--white);
+  border-color: var(--deep-teal);
+}
+
+/* Copy Button — Copied State */
+.copy-btn.copied {
+  background: #2a5a3d;
+  color: var(--white);
+  border-color: #2a5a3d;
+}
+
+
+/* ============================================================
+   08. CONTACT GUIDANCE BLOCK
+============================================================ */
+
+/* Guidance Container */
+.guidance-block {
+  background: var(--off-white);
+  border-left: 3px solid var(--deep-teal);
+  padding: 28px 32px;
+  border-radius: var(--radius-sm);
+  margin-top: 32px;
+}
+
+/* Guidance Heading */
+.guidance-block h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Guidance Paragraph */
+.guidance-block p {
+  font-size: 0.9rem;
+  color: var(--slate-teal);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* Last Paragraph — Remove Bottom Margin */
+.guidance-block p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   09. INTERNATIONAL CONTACT SECTION
+============================================================ */
+
+/* International Section */
+.intl-section {
+  padding: 96px 0;
+  background: var(--off-white);
+}
+
+/* International Cards Grid */
+.intl-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 40px;
+}
+
+/* International Contact Card */
+.intl-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 36px;
+  border: 1px solid var(--border-light);
+}
+
+/* International Card Heading */
+.intl-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* International Card Paragraph */
+.intl-card p {
+  font-size: 0.92rem;
+  color: var(--slate-teal);
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+/* Last Paragraph — Remove Bottom Margin */
+.intl-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   10. RESPONSIVE CONTACT LAYOUT
+============================================================ */
+
+@media (max-width: 900px) {
+
+  /* Contact Section — Single Column */
+  .contact-split {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 64px 0;
+  }
+
+  /* International Grid — Single Column */
+  .intl-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* International Section Spacing */
+  .intl-section {
+    padding: 64px 0;
+  }
+
+}

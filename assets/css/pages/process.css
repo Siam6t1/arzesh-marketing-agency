@@ -1,0 +1,138 @@
+
+/* ============================================================
+   ARZESH — Process Page
+   ============================================================ */
+
+
+/* ============================================================
+   01. PROCESS TIMELINE
+   ============================================================ */
+
+.timeline {
+  position: relative;
+  margin-top: 64px;
+}
+
+
+/* ============================================================
+   02. TIMELINE STEP
+   ============================================================ */
+
+.timeline-step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 40px;
+  padding: 48px 0;
+  border-bottom: 1px solid var(--border-light);
+  position: relative;
+}
+
+.timeline-step:last-child {
+  border-bottom: none;
+}
+
+
+/* ============================================================
+   03. STEP NUMBER
+   ============================================================ */
+
+.step-num-big {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--deep-teal);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  opacity: 0.25;
+}
+
+
+/* ============================================================
+   04. STEP CONTENT
+   ============================================================ */
+
+.step-content h2 {
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.step-content .step-desc {
+  font-size: 1rem;
+  color: var(--slate-teal);
+  line-height: 1.8;
+  max-width: 640px;
+  margin-bottom: 28px;
+}
+
+
+/* ============================================================
+   05. STEP META GRID
+   ============================================================ */
+
+.step-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 720px;
+}
+
+
+/* ============================================================
+   06. STEP META BLOCK
+   ============================================================ */
+
+.step-meta-block {
+  padding: 20px 24px;
+  background: var(--off-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.step-meta-block .meta-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate-teal);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.step-meta-block p {
+  font-size: 0.88rem;
+  color: var(--deep-teal);
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   07. PROCESS NOTE
+   ============================================================ */
+
+.process-note {
+  margin-top: 56px;
+  padding: 32px;
+  background: var(--off-white);
+  border-left: 3px solid var(--deep-teal);
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  color: var(--slate-teal);
+  line-height: 1.7;
+}
+
+
+/* ============================================================
+   08. RESPONSIVE — MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .timeline-step {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 32px 0;
+  }
+
+  .step-meta {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

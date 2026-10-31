@@ -1,0 +1,148 @@
+
+/* ============================================================
+   ARZESH — Premium Preloader
+
+   Hidden by default when JS is disabled.
+   ============================================================ */
+
+
+/* ============================================================
+   01. PRELOADER BASE
+============================================================ */
+
+/* Main Preloader Container */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: var(--preloader-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  opacity: 1;
+  transition: opacity 0.55s var(--ease-out), visibility 0s linear 0.55s;
+  visibility: visible;
+}
+
+/* Preloader — Completed State */
+.preloader.preloader--done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   02. PRELOADER LOGO
+============================================================ */
+
+/* Preloader Logo */
+.preloader-logo {
+  width: 64px;
+  height: 64px;
+  display: block;
+  animation: preloader-pulse 1.6s ease-in-out infinite;
+}
+
+
+/* ============================================================
+   03. PRELOADER PROGRESS BAR
+============================================================ */
+
+/* Progress Bar Container */
+.preloader-bar {
+  width: 96px;
+  height: 2px;
+  background: rgba(1, 42, 45, 0.12);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Progress Bar Animation Element */
+.preloader-bar span {
+  position: absolute;
+  inset: 0;
+  background: var(--preloader-bar);
+  transform-origin: left center;
+  animation: preloader-bar 1.2s var(--ease-in-out) infinite;
+}
+
+
+/* ============================================================
+   04. PRELOADER ANIMATIONS
+============================================================ */
+
+/* Logo Pulse Animation */
+@keyframes preloader-pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: scale(0.96);
+  }
+
+}
+
+
+/* Progress Bar Animation */
+@keyframes preloader-bar {
+
+  0% {
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+
+  50% {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+
+  51% {
+    transform: scaleX(1);
+    transform-origin: right center;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right center;
+  }
+
+}
+
+
+/* ============================================================
+   05. NO-JAVASCRIPT FALLBACK
+============================================================ */
+
+/* Hide Preloader When JavaScript Is Disabled */
+html:not(.js) .preloader {
+  display: none;
+}
+
+
+/* ============================================================
+   06. ACCESSIBILITY — REDUCED MOTION
+============================================================ */
+
+/* Disable Preloader Animations for Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+  .preloader-logo,
+  .preloader-bar span {
+    animation: none;
+  }
+
+  /* Simplified Preloader Transition */
+  .preloader {
+    transition: opacity 0.2s linear;
+  }
+
+}

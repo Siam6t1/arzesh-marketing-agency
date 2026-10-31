@@ -1,0 +1,193 @@
+
+/* ============================================================
+   ARZESH — Portfolio Page
+   ============================================================ */
+
+
+/* ============================================================
+   01. PORTFOLIO FILTERS
+============================================================ */
+
+/* Filter Controls Container */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 48px 0 40px;
+}
+
+/* Base Filter Button */
+.filter-btn {
+  padding: 8px 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--slate-teal);
+  background: transparent;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/* Filter Button Hover */
+.filter-btn:hover {
+  border-color: var(--border-medium);
+  color: var(--deep-teal);
+}
+
+/* Active Filter Button */
+.filter-btn.active {
+  background: var(--deep-teal);
+  color: var(--white);
+  border-color: var(--deep-teal);
+}
+
+
+/* ============================================================
+   02. PORTFOLIO GRID
+============================================================ */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+
+/* ============================================================
+   03. PROJECT CARDS
+============================================================ */
+
+/* Base Project Card */
+.project-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s;
+  display: block;
+}
+
+/* Project Card Hover */
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(1, 42, 45, 0.08);
+}
+
+/* Hidden Project Card */
+.project-card.hidden {
+  display: none;
+}
+
+
+/* ============================================================
+   04. PROJECT VISUALS
+============================================================ */
+
+/* Project Visual Container */
+.project-visual {
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--deep-teal);
+}
+
+/* Project Visual Overlay */
+.project-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(1, 42, 45, 0.5) 100%);
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   05. PROJECT STATUS LABELS
+============================================================ */
+
+/* Base Project Label */
+.project-label {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.18);
+  color: var(--white);
+  backdrop-filter: blur(4px);
+}
+
+/* Concept Project Label */
+.project-label.concept {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Coming Soon Project Label */
+.project-label.coming {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* ============================================================
+   06. PROJECT INFORMATION
+============================================================ */
+
+/* Project Information Container */
+.project-info {
+  padding: 24px;
+}
+
+/* Project Category */
+.project-info .cat {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate-teal);
+  margin-bottom: 6px;
+}
+
+/* Project Heading */
+.project-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* Project Status */
+.project-info .status {
+  font-size: 0.82rem;
+  color: var(--slate-teal);
+}
+
+
+/* ============================================================
+   07. EMPTY PORTFOLIO STATE
+============================================================ */
+
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--slate-teal);
+  font-size: 0.95rem;
+}
+
+
+/* ============================================================
+   08. RESPONSIVE — MOBILE
+============================================================ */
+
+@media (max-width: 768px) {
+
+  /* Portfolio Grid — Single Column */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

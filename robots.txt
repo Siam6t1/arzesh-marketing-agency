@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Disallow 404 from indexing
+Disallow: /404.html
+
+Sitemap: https://siam-mahmud-rana.github.io/arzesh-marketing-agency/sitemap.xml

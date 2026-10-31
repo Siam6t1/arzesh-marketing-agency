@@ -1,0 +1,33 @@
+
+/* ============================================================
+   ARZESH — Shared Card Patterns
+   ============================================================ */
+
+
+/* ============================================================
+   01. BASE CARD
+============================================================ */
+
+/* Default Card */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  transition: border-color 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+
+/* ============================================================
+   02. CARD HOVER EFFECTS
+============================================================ */
+
+/* Card Border — Hover */
+.card:hover {
+  border-color: var(--border-medium);
+}
+
+/* Card Link Arrow — Hover */
+.card:hover .card-link .arrow {
+  transform: translateX(4px);
+}

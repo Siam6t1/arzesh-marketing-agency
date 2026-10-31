@@ -1,0 +1,48 @@
+
+/* ============================================================
+   ARZESH — Global Responsive Adjustments
+
+   Page-specific responsive rules live in each page CSS file.
+   ============================================================ */
+
+
+/* ============================================================
+   01. ACCESSIBILITY — REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+}
+
+
+/* ============================================================
+   02. PRINT STYLES
+============================================================ */
+
+/* Hide Navigation & Non-Print Elements */
+@media print {
+
+  .navbar,
+  .footer,
+  .mobile-menu,
+  .skip-link,
+  .preloader {
+    display: none !important;
+  }
+
+  /* Print-Friendly Document Colors */
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+}

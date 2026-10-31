@@ -1,0 +1,155 @@
+
+/* ============================================================
+   ARZESH — Buttons
+   ============================================================ */
+
+
+/* ============================================================
+   01. BASE BUTTON
+============================================================ */
+
+/* Default Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.2s;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   02. BUTTON ARROW ANIMATION
+============================================================ */
+
+/* Arrow Transition */
+.btn .arrow {
+  transition: transform 0.25s var(--ease-out);
+}
+
+/* Arrow Hover Movement */
+.btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+
+/* ============================================================
+   03. PRIMARY BUTTON
+============================================================ */
+
+/* Primary Button — Default */
+.btn--primary {
+  background: var(--deep-teal);
+  color: var(--white);
+}
+
+/* Primary Button — Hover */
+.btn--primary:hover {
+  background: #0a3d40;
+  transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   04. LIGHT BUTTON
+============================================================ */
+
+/* Light Button — Default */
+.btn--light {
+  background: var(--white);
+  color: var(--deep-teal);
+}
+
+/* Light Button — Hover */
+.btn--light:hover {
+  background: #e8ecec;
+  transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   05. OUTLINE BUTTON
+============================================================ */
+
+/* Outline Button — Default */
+.btn--outline {
+  background: transparent;
+  color: var(--deep-teal);
+  border: 1px solid var(--border-medium);
+}
+
+/* Outline Button — Hover */
+.btn--outline:hover {
+  border-color: var(--deep-teal);
+  background: var(--off-white);
+}
+
+
+/* ============================================================
+   06. LIGHT OUTLINE BUTTON
+============================================================ */
+
+/* Light Outline Button — Default */
+.btn--outline-light {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Light Outline Button — Hover */
+.btn--outline-light:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* ============================================================
+   07. BUTTON SIZE VARIANTS
+============================================================ */
+
+/* Small Button */
+.btn--sm {
+  padding: 10px 20px;
+  font-size: 0.82rem;
+}
+
+
+/* ============================================================
+   08. INLINE CARD LINK
+============================================================ */
+
+/* Card Link — Default */
+.card-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--deep-teal);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+/* Card Link Arrow Transition */
+.card-link .arrow {
+  transition: transform 0.25s;
+}
+
+
+/* ============================================================
+   09. RESPONSIVE BUTTON STYLES
+============================================================ */
+
+/* Small Mobile Devices — 480px */
+@media (max-width: 480px) {
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.85rem;
+  }
+
+}

@@ -1,0 +1,148 @@
+
+/* ============================================================
+   ARZESH — Legal Pages (Privacy, Terms)
+   ============================================================ */
+
+
+/* ============================================================
+   01. LEGAL CONTENT WRAPPER
+============================================================ */
+
+.legal-wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 96px 0;
+}
+
+
+/* ============================================================
+   02. DRAFT NOTICE
+============================================================ */
+
+.legal-wrap .draft-note {
+  background: #FFF8E6;
+  border-left: 3px solid #C9A227;
+  padding: 16px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: #6B5B1E;
+  line-height: 1.6;
+  margin-bottom: 48px;
+}
+
+
+/* ============================================================
+   03. LEGAL PAGE HEADING
+============================================================ */
+
+.legal-wrap h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+
+/* ============================================================
+   04. LAST UPDATED INFORMATION
+============================================================ */
+
+.legal-wrap .updated {
+  font-size: 0.8rem;
+  color: var(--slate-teal);
+  letter-spacing: 0.04em;
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+
+/* ============================================================
+   05. LEGAL SECTION HEADINGS
+============================================================ */
+
+.legal-wrap h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 40px 0 12px;
+  color: var(--deep-teal);
+}
+
+/* First Section Heading */
+.legal-wrap h2:first-of-type {
+  margin-top: 0;
+}
+
+
+/* ============================================================
+   06. LEGAL BODY TEXT
+============================================================ */
+
+/* Paragraphs */
+.legal-wrap p {
+  font-size: 0.95rem;
+  color: var(--slate-teal);
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+
+/* ============================================================
+   07. LEGAL LISTS
+============================================================ */
+
+/* Unordered List */
+.legal-wrap ul {
+  padding-left: 20px;
+  margin-bottom: 16px;
+  list-style: disc;
+}
+
+/* List Items */
+.legal-wrap li {
+  font-size: 0.95rem;
+  color: var(--slate-teal);
+  line-height: 1.8;
+  margin-bottom: 6px;
+}
+
+
+/* ============================================================
+   08. LEGAL LINKS
+============================================================ */
+
+/* Default Link */
+.legal-wrap a {
+  color: var(--deep-teal);
+  text-decoration: underline;
+}
+
+/* Link Hover */
+.legal-wrap a:hover {
+  text-decoration: none;
+}
+
+
+/* ============================================================
+   09. LEGAL PAGE FOOTER NAVIGATION
+============================================================ */
+
+.legal-back {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-light);
+}
+
+
+/* ============================================================
+   10. RESPONSIVE — MOBILE
+============================================================ */
+
+@media (max-width: 768px) {
+
+  /* Legal Content Spacing */
+  .legal-wrap {
+    padding: 64px 0;
+  }
+
+}

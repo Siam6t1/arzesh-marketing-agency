@@ -1,0 +1,134 @@
+
+/* ============================================================
+   ARZESH — Services Page
+   ============================================================ */
+
+
+/* ============================================================
+   01. SERVICE DETAIL LAYOUT
+   ============================================================ */
+
+.service-detail {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 48px;
+  padding: 80px 0;
+  border-bottom: 1px solid var(--border-light);
+  scroll-margin-top: 100px;
+}
+
+.service-detail:last-of-type {
+  border-bottom: none;
+}
+
+
+/* ============================================================
+   02. SERVICE INDEX
+   ============================================================ */
+
+.service-detail .service-index {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--slate-teal);
+  font-weight: 500;
+  padding-top: 8px;
+}
+
+
+/* ============================================================
+   03. SERVICE CONTENT
+   ============================================================ */
+
+.service-detail .service-body h2 {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 600;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.service-detail .service-body .overview {
+  font-size: 1rem;
+  color: var(--slate-teal);
+  line-height: 1.8;
+  margin-bottom: 32px;
+  max-width: 720px;
+}
+
+
+/* ============================================================
+   04. SERVICE META GRID
+   ============================================================ */
+
+.service-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+
+/* ============================================================
+   05. SERVICE META HEADINGS
+   ============================================================ */
+
+.service-meta h4 {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate-teal);
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+
+/* ============================================================
+   06. SERVICE META LIST
+   ============================================================ */
+
+.service-meta ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.service-meta li {
+  font-size: 0.9rem;
+  color: var(--slate-teal);
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   07. SERVICE META LIST MARKER
+   ============================================================ */
+
+.service-meta li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--deep-teal);
+}
+
+
+/* ============================================================
+   08. RESPONSIVE — MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .service-detail {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 56px 0;
+  }
+
+  .service-meta {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

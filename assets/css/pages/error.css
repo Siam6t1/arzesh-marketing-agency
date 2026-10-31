@@ -1,0 +1,114 @@
+
+/* ============================================================
+   ARZESH — 404 Error Page
+   ============================================================ */
+
+
+/* ============================================================
+   01. ERROR PAGE LAYOUT
+============================================================ */
+
+.error-page {
+  min-height: 100vh;
+  background: var(--deep-teal);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   02. DECORATIVE BACKGROUND SHAPES
+============================================================ */
+
+/* Base Background Shape */
+.error-bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Background Shape — Top Right */
+.error-bg-shape.a {
+  width: 500px;
+  height: 500px;
+  top: -100px;
+  right: -100px;
+}
+
+/* Background Shape — Bottom Left */
+.error-bg-shape.b {
+  width: 280px;
+  height: 280px;
+  bottom: -60px;
+  left: -60px;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+
+/* ============================================================
+   03. ERROR CONTENT CONTAINER
+============================================================ */
+
+.error-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+}
+
+
+/* ============================================================
+   04. ERROR CODE
+============================================================ */
+
+.error-code {
+  font-size: clamp(6rem, 20vw, 14rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  color: var(--white);
+  opacity: 0.18;
+  margin-bottom: 8px;
+  user-select: none;
+}
+
+
+/* ============================================================
+   05. ERROR PAGE HEADING
+============================================================ */
+
+.error-inner h1 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  margin-top: -16px;
+  color: var(--white);
+}
+
+
+/* ============================================================
+   06. ERROR PAGE DESCRIPTION
+============================================================ */
+
+.error-inner p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 480px;
+}
+
+
+/* ============================================================
+   07. ERROR PAGE ACTIONS
+============================================================ */
+
+.error-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
